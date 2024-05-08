@@ -1,0 +1,427 @@
+:root{
+    --btn-color:#e58f00;
+    --about-sec:#1d1d23;
+    
+}
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    font-family: 'robot',sans-serif;
+    transition: 0.5s;
+    text-transform: capitalize;
+}
+html{
+    font-size: 65%;
+    scroll-behavior: smooth;
+}
+.header{
+    padding: 1rem 7%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: #1d1d23;
+
+}
+.logo img{
+    width: 93px;
+    height: 70px;
+}
+.navbar{
+    display: flex;
+}
+.navbar a{
+    color: white;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+   
+
+}
+.navbar a:hover{
+color: var(--btn-color);
+
+
+}
+.icons div {
+    color: white;
+    font-size: 1.5rem;
+margin-right: 4px;
+}
+.icons #menu-bar{
+    height:25px ;
+    width: 25px;
+    /* margin-right: 145px; */
+}
+.icons div #menu-bar:hover{
+    cursor: pointer;
+
+
+}
+.icons a{
+    color: white;
+    padding: 0.6rem 1.5rem;
+    border: 1px solid orange;
+    font-size: 18px;
+    border-radius: 10px;
+    transition: 0.5s;
+    display: inline-block;
+}
+.contact-btn:hover{
+    transform: scale(1.1);
+    background: var(--btn-color);
+    border: 1px solid white;
+}
+.navbar.active{
+    clip-path: polygon(0 0,100% 0,100% 100%,0% 100%);
+}
+
+/* styling of home section */
+.home{
+    padding:1rem 7% ;
+    background: url(../photo/sajid.jpg);
+    min-height: 100vh;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main-home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-image{
+    position: relative;
+    height: 300px;
+    width: 300px;
+}
+
+.home-inner-content img{
+    width: 60rem; 
+  height: 60rem; 
+  position: absolute; 
+  top: 0; 
+  border-radius: 30rem;
+  left: 0; 
+  margin-top: 10px;
+  animation: rotateImage 5s linear infinite;
+}
+@keyframes rotateImage{
+    from {
+        transform: rotate(0deg); 
+      }
+      to {
+        transform: rotate(360deg); 
+      }
+    }
+.main-home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 80px;
+    
+}
+.home-inner-content{
+    flex: 1 1 45rem;
+}
+
+.home-image img{
+    width: 145%;
+    height: 145%;
+}
+#home-text-content{
+    padding: 0 15rem;
+    margin-top: 15rem;
+    margin-left: 5rem;
+   
+}
+#home-text-content h1{
+    font-size: 35px;
+    color: #e58f00;
+}
+#home-text-content p{
+    font-size: 1.5rem;
+    color: white;
+    margin-top: 10px;
+    line-height: 3rem;
+    margin-bottom: 15px;
+}
+#home-text-content a{
+    color: white;
+    padding: 0.6rem 1.5rem;
+    border: 1px solid orange;
+    font-size: 18px;
+    border-radius: 10px;
+    transition: 0.5s;
+    display: inline-block;}
+
+
+    #home-text-content a:hover{
+         transform: scale(1.1);
+        background: var(--btn-color);
+        border: 1px solid white;
+        margin-top: 5px;
+    }
+    .about{
+        padding: 1rem 7%;
+        background: var(--about-sec);
+    }
+    .main-about{
+        display: flex;
+        /* width: 170vh; */
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+.about-content{
+    flex: 1 1 45rem;
+
+}
+
+.about-text-content{
+    padding: 0 4rem;
+   
+}
+.about-inner-content{
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 3rem;
+    margin-bottom: 3rem;
+}
+.about-content .about-inner-content img{
+    width: 95%;
+    margin-left: 10px;
+}
+
+.about-text-content h1{
+    font-size: 40px;
+    color: #e58f00;
+}
+.about-text-content p{
+    font-size: 1.5rem;
+    color: white;
+
+    line-height: 35px;
+   
+}
+
+/* food quality styling */
+
+.quality{
+    padding: 4rem 7%;
+    background-image: linear-gradient(50.34deg,black 52.45%,pink 52.45%);
+}
+.main-quality{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.main-inner-quality{
+    flex:1 1 45rem
+}
+
+.quality-content{
+    padding: 0 6rem;
+}
+.quality-content h1{
+    color: var(--btn-color);
+    font-size: 40px;
+}
+.quality-content ul{
+    color: white;
+    
+    font-size: 1.5rem;
+    line-height: 50px;
+}
+.quality-image{
+    width: 100%;
+}
+.quality-image img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.gallary{
+    padding: 4rem 7%;
+    background: var(--about-sec);
+}
+.main-gallary{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.akshitinner-gallary{
+    flex: 1  1 300px;
+}
+.akshitinner-gallary .akshugallary-image img{
+    width: 100%;
+}
+ /* jbrdst cheez */
+ .akshitinner-gallary .akshugallary-image:hover img{
+    transform: perspective(1000px) rotateX(-4.80deg) rotateY(-10.23deg) scale3d(1.05,1.05,1.05);
+    clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+ }
+
+
+
+ .enjoy-our-food{
+    background: url(../photo/tail.png);
+    width: 100%;
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    
+ }
+ .enjoy-our-food {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    margin-top: 4rem;
+    
+ }
+ .food{
+    border: 4px solid white;
+    width: 65rem;
+    padding: 2rem;
+    margin-top: 26rem;
+    
+
+ }
+ .food h1{
+    text-align: center;
+    color:blueviolet;
+    font-size: 45px;
+    padding: 1rem 0;
+    text-shadow: 0px 0px 34px;
+    
+ }
+ .food p{
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    line-height: 30px;
+    
+ }
+
+ 
+ .iconsi div{
+    color: white;
+    font-size: 5.5rem;
+    width: 55px;
+    height: 55px;
+    /* position: fixed; */
+    /* bottom: 100px; */
+    /* right: 27px; */
+    cursor: pointer;
+    
+}
+.iconsi div{
+    position: fixed;
+    bottom:100px ;
+    right: 27px;
+}
+.navbar #cart{
+width: 24px;
+filter: invert(1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* responsive */
+
+@media(max-width:767px){
+    .header{
+        padding: 2rem;
+    }
+    .icons{
+        display: initial;
+    }
+
+    
+.navbar{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 100%;
+    background-color: var(--btn-color);
+    clip-path: polygon(0 0,100% 0,0 0);
+}
+.navbar a{
+    display: block;
+    text-align: center;
+    margin: 1rem;
+    padding: 1rem;
+}
+/* home css designing */
+.home-text-content{
+    padding: 0.2rem;
+
+}
+.main-home{
+    padding: 2rem 0;
+}
+.home{
+    padding-top: 100px;
+}
+.home-text-content{
+    margin-top: 300px;
+}
+.about-content .about-inner-contect img{
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+}
+.food{
+    border: 4px solid white;
+    width: 100rem;
+    padding: 5rem;
+
+ }
+ .iconsi div{
+    position: fixed;
+    bottom: 100px;
+    right: 150px;
+ }
+}

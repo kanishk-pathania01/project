@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 100px;
+            margin-top: 250px;
+        }
+
+        .left {
+            text-align: left;
+            margin-right: 50px;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .button {
+            background: #3FB5E3;
+            border: 0;
+            border-radius: 0.3em;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            outline: 0;
+            padding: 0 1em;
+            text-transform: uppercase;
+            white-space: nowrap;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .button-content {
+            height: 100%;
+            line-height: 44px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        .button-content.control {
+            position: relative;
+            visibility: hidden;
+        }
+
+        .checkmark {
+            height: 32px;
+            margin: 6.4px 0;
+            opacity: 1;
+            width: 100%;
+        }
+
+        .checkmark .checkmark__path {
+            stroke: #fff;
+            stroke-width: 2px;
+            transform-origin: 50% 50%;
+            stroke-miterlimit: 10;
+            opacity: 1;
+            stroke-dasharray: 48;
+            stroke-dashoffset: 48;
+        }
+
+        .pizza img {
+            width: 100%;
+            max-width: 300px; /* Adjust as needed */
+            margin-right: 500px;
+        }
+
+        @keyframes checkmarkAnimation {
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes buttontextPrimary {
+            0% {
+                opacity: 0;
+                transform: translateX(0);
+            }
+            75% {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            76% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(0%);
+            }
+        }
+
+        @keyframes buttontextSecondary {
+            0% {
+                transform: translateX(0);
+            }
+            75% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h1>Choose your Billing Method</h1>
+            <div class="wrapper">
+                <a href="../Project/QR.html">
+                    <button class="button animated" onclick="toggleClass(this)">
+                        <span class="button-content control">Pay Using QR</span>
+                        <span class="button-content primary">Pay Using QR</span>
+                        <span class="button-content secondary">
+                            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                <path class="checkmark__path" fill="none" d="M4 10 l5 4 8-8.5" />
+                            </svg>
+                        </span>
+                    </button>
+                </a>
+                <a href="../Project/order_cod.html">
+                    <button class="button animated" onclick="toggleClass(this)">
+                        <span class="button-content control">Cash On Delivery</span>
+                        <span class="button-content primary">Cash On Delivery</span>
+                        <span class="button-content secondary">
+                            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                <path class="checkmark__path" fill="none" d="M4 10 l5 4 8-8.5" />
+                            </svg>
+                        </span>
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="pizza">
+            <img src="photo/pizz.png" alt="Pizza" />
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scan QR To Pay</title>
+<script>
+  setTimeout(function() {
+    window.location.href = "../Project/order_cod.html";
+  }, 5000); // 5 seconds in milliseconds
+</script>
+</head>
+<body>
+<div id="container">
+    <div class="center" style="text-align: center;">
+        <h1>Scan QR To Pay</h1>
+    </div>
+    <div class="center" style="text-align: center;">
+        <a id="btn-scan-qr">
+            <img src="photo/qr.png" />
+        </a>
+    </div>
+    <canvas hidden="" id="qr-canvas"></canvas>
+  
+    <div id="qr-result" hidden="">
+        <b>Data:</b> <span id="outputData"></span>
+    </div>
+</div>
+</body>
+</html>
